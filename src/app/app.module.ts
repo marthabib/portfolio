@@ -17,7 +17,7 @@ import { ToolBarWithSideBarComponent } from './tool-bar-with-side-bar/tool-bar-w
 import { ToolBarComponent } from './tool-bar/tool-bar.component';
 import { FormsModule } from '@angular/forms';
 import { AboutComponent } from './about/about.component';
-import{StackListComponent} from './stack/stack-list/stack-list.component';
+import{StackListComponent} from './stack-list/stack-list.component';
 import { BackGroundComponent } from './back-ground/back-ground.component'
 @NgModule({
   declarations: [

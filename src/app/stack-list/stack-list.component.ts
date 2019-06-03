@@ -12,5 +12,4 @@ export class StackListComponent implements OnInit {
   ngOnInit() {
   }
 
-
 }
