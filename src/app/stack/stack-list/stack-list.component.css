@@ -1,0 +1,22 @@
+.example-tab-icon {
+  margin-right: 8px;
+}
+.tab_content{
+	margin-top: 15px;
+	margin-left: 45px;
+	color:rgb(148, 177, 224);
+    font-size: 21px;
+    font-weight: 200;
+    line-height: 1.5;
+    text-align: justify;
+}
+.tab_content_header{
+	color:#EFC94C;
+	border-bottom: solid;
+	border-color: white;
+	border-width: 2px;
+	padding-bottom: 2px;
+}
+.label{
+	color:white;
+}

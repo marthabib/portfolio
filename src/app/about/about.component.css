@@ -1,0 +1,23 @@
+
+.header{
+	color:#EFC94C;
+	border-bottom: solid;
+	border-color: white;
+	border-width: 2px;
+	padding-bottom: 2px;
+
+}
+p{   
+	color:rgb(148, 177, 224);
+
+	margin-bottom: 30px;
+    margin-right: 70px;
+    font-size: 21px;
+    font-weight: 200;
+    line-height: 1.5;
+    text-align: justify;}
+
+.colored{
+	color:white;
+	font-size: 15px;
+}

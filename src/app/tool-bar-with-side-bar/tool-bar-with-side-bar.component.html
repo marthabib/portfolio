@@ -1,0 +1,59 @@
+<div class="row">
+    <mat-toolbar class='col-12'>
+        <mat-toolbar-row class='col-12'>
+          <button mat-icon-button (click)="sidenav.toggle();">
+                <mat-icon *ngIf='closed'>menu</mat-icon>
+                <mat-icon *ngIf='!closed'>close</mat-icon>
+          </button> 
+          <div class='center_toolbar col-10'>
+            
+          <span  *ngFor="let choice of sideBarContentList" class='toolBarChoices' 
+          (click)="onSelect(choice);sidenav.close()"
+           
+          [class.selectedToolbar]="selctedChoice===choice"
+          >{{choice}}</span>
+          </div>
+          <span style="flex: 1 1 auto;"></span>
+          <img class="sm-img" [src]="profImg"
+            (mouseover)='chngProfImgClr("hover")'
+            (mouseout)='chngProfImgClr("out")'>
+        </mat-toolbar-row>
+    </mat-toolbar>
+
+    <mat-sidenav-container   >
+
+      <mat-sidenav (opened)="closed=false" (closed)="closed=true" class="col-3" mode='over'  #sidenav   ><!--opened   use opened if u want it opened as default-->
+        
+        <img class="md-img" 
+        [src]="profImg"
+            (mouseover)='chngProfImgClr("hover")'
+            (mouseout)='chngProfImgClr("out")'>
+        <p class="center">Martin Mamdouh</p>
+        <ul>
+          <li *ngFor="let content of sideBarContentList"
+              (click)="onSelect(content);sidenav.toggle();"
+              [class.selected]="selctedChoice===content">
+              {{content}}
+  
+               
+          </li>
+        </ul>
+        
+
+        
+      </mat-sidenav>
+
+       <mat-sidenav-content   class="col-9"> 
+        <app-video-bg></app-video-bg>
+        <div  class='navigation_container'>
+
+          <ng-content select='.stack' *ngIf='selctedChoice=="Stack"'></ng-content>
+          <ng-content select='.courses' *ngIf='selctedChoice=="Courses"'></ng-content>
+           <ng-content select='.about' *ngIf='selctedChoice=="About"'></ng-content>
+          <!--<router-outlet></router-outlet>-->
+          
+        </div>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+
+</div>
