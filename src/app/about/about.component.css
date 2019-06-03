@@ -21,3 +21,15 @@ p{
 	color:white;
 	font-size: 15px;
 }
+.sub_header{
+	text-align: center;
+	color:white;
+	font-size: 25px;
+}
+.special_p{
+	background-color:  rgb(148, 177, 224);
+	color: rgb(25, 41, 66);
+	padding: 8px 8px 8px 10px;
+	border-radius: 20px;
+	font-style: italic;
+}

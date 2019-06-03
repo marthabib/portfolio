@@ -12,9 +12,9 @@ import {MatTabsModule} from '@angular/material/tabs';
 //
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SideBarComponent } from './side-bar/side-bar.component';
+
 import { ToolBarWithSideBarComponent } from './tool-bar-with-side-bar/tool-bar-with-side-bar.component';
-import { ToolBarComponent } from './tool-bar/tool-bar.component';
+
 import { FormsModule } from '@angular/forms';
 import { AboutComponent } from './about/about.component';
 import{StackListComponent} from './stack-list/stack-list.component';
@@ -22,9 +22,7 @@ import { BackGroundComponent } from './back-ground/back-ground.component'
 @NgModule({
   declarations: [
     AppComponent,
-    SideBarComponent,
     ToolBarWithSideBarComponent,
-    ToolBarComponent,
     AboutComponent,
     StackListComponent,
     BackGroundComponent
