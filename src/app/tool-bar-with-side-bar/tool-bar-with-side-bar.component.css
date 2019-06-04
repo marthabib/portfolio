@@ -18,15 +18,16 @@ mat-sidenav-container {
       background-clip: padding-box;  
       */ 
      }
-
+/* for mobile width is 50 font size is bigger at the media part in the bottom
+of this file I wrote the css for desktop*/
 mat-sidenav{
        
        color:rgba(96, 125, 139, 1);
-       font-size:1.2vw;
+       font-size:2.4vw;
        /*background-color:rgba(238, 221, 201,0.5);*/
        background-color:rgba(244, 244, 244,0.5);
        min-height: 90%;
-       max-width: 25%;}
+       max-width: 50%;}
 
 mat-sidenav-content {
        
@@ -152,6 +153,8 @@ li:hover {
 }
 .navigation_container{
       position: relative;
+      margin-left: 45px;
+      margin-right: 25px;
       top:5%;
       left:2%;
       width: 90%;
@@ -182,17 +185,49 @@ mat-toolbar-row{
        width:100%;
        min-width :100%;
 }
-.toolBarChoices{
-       color:white;
-       cursor: pointer;
-       border:none;
-       margin-left: 15px;
-       padding-bottom: 2px;
-       outline: 0;
-       font-size:1.2vw;
-       font-style: italic;
 
+
+/* for mobile */
+.toolBarChoices{
+      display: none;
 }
+
+.side_menu_btn{
+      position: relative;
+      left: 50%
+}
+/*    for desktop     */
+@media only screen and (min-width: 768px) {
+      .toolBarChoices{
+            display: inline-block;
+             color:white;
+             cursor: pointer;
+             border:none;
+             margin-left: 15px;
+             padding-bottom: 2px;
+             outline: 0;
+             font-size:1.3vw;
+             font-style: italic;
+      
+            }
+      .side_menu_btn{
+            position: relative;
+            left: 1%
+            }
+      
+      mat-sidenav{
+             
+             color:rgba(96, 125, 139, 1);
+             font-size:1.2vw;
+             /*background-color:rgba(238, 221, 201,0.5);*/
+             background-color:rgba(244, 244, 244,0.5);
+             min-height: 90%;
+             max-width: 25%;
+            }
+}
+
+
+/* for both  */
 .toolBarChoices:hover{
        cursor: pointer;
        color :black;
@@ -215,5 +250,4 @@ mat-toolbar-row{
        border-bottom-color:  rgb(255, 0, 242);
         border-bottom-color:  white;
        outline: 0;
-}
-       
+} 
